@@ -1330,3 +1330,143 @@ Processing by TodosController#update as HTML
 Completed 200 OK in 26ms (Views: 18.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/todos" for 127.0.0.1 at 2019-02-21 14:51:58 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/chandanas/.rvm/gems/ruby-2.3.8/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb
+  [1m[36mTodo Load (19.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:4
+  Rendered todos/index.html.erb (76.6ms)
+Completed 200 OK in 169ms (Views: 92.0ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/todos" for 127.0.0.1 at 2019-02-21 14:53:28 +0530
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb
+  Rendered todos/index.html.erb (15.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/chandanas/Desktop/Todo-app/app/views/todos/index.html.erb:4: unknown regexp options - th
+/Users/chandanas/Desktop/Todo-app/app/views/todos/index.html.erb:4: syntax error, unexpected '<'
+<tr><th>Name</th><th>Description</th></tr>
+                  ^
+/Users/chandanas/Desktop/Todo-app/app/views/todos/index.html.erb:4: unknown regexp options - tr
+/Users/chandanas/Desktop/Todo-app/app/views/todos/index.html.erb:5: syntax error, unexpected '<'
+<% @todos.each do |todo|@output_buffer.safe_append='
+ ^
+/Users/chandanas/Desktop/Todo-app/app/views/todos/index.html.erb:5: syntax error, unexpected keyword_do_block, expecting keyword_end
+<% @todos.each do |todo|@output_buffer.safe_append='
+                 ^
+/Users/chandanas/Desktop/Todo-app/app/views/todos/index.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/todos/index.html.erb:4: unknown regexp options - th
+app/views/todos/index.html.erb:4: syntax error, unexpected '<'
+app/views/todos/index.html.erb:4: unknown regexp options - tr
+app/views/todos/index.html.erb:5: syntax error, unexpected '<'
+app/views/todos/index.html.erb:5: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/todos/index.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/todos" for 127.0.0.1 at 2019-02-21 14:54:03 +0530
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:5
+  Rendered todos/index.html.erb (3.2ms)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todos/new" for 127.0.0.1 at 2019-02-21 14:54:05 +0530
+Processing by TodosController#new as HTML
+  Rendering todos/new.html.erb
+  Rendered todos/new.html.erb (249.8ms)
+Completed 200 OK in 286ms (Views: 254.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todos" for 127.0.0.1 at 2019-02-21 15:06:39 +0530
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb
+  [1m[36mTodo Load (11.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:5
+  Rendered todos/index.html.erb (15.6ms)
+Completed 200 OK in 80ms (Views: 8.0ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2019-02-21 15:06:41 +0530
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (71.0ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:16
+  Rendering todos/show.html.erb
+  Rendered todos/show.html.erb (0.7ms)
+Completed 200 OK in 253ms (Views: 6.1ms | ActiveRecord: 71.0ms)
+
+
+Started GET "/todos/1/edit" for 127.0.0.1 at 2019-02-21 15:06:44 +0530
+Processing by TodosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:19
+  Rendering todos/edit.html.erb
+  Rendered todos/edit.html.erb (2.4ms)
+Completed 200 OK in 41ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todos" for 127.0.0.1 at 2019-02-21 15:06:47 +0530
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:5
+  Rendered todos/index.html.erb (5.9ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todos/1/edit" for 127.0.0.1 at 2019-02-21 15:06:50 +0530
+Processing by TodosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:19
+  Rendering todos/edit.html.erb
+  Rendered todos/edit.html.erb (3.6ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todos" for 127.0.0.1 at 2019-02-21 15:06:51 +0530
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:5
+  Rendered todos/index.html.erb (5.2ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2019-02-21 15:06:52 +0530
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:16
+  Rendering todos/show.html.erb
+  Rendered todos/show.html.erb (1.2ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todos" for 127.0.0.1 at 2019-02-21 15:06:55 +0530
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:5
+  Rendered todos/index.html.erb (5.9ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2019-02-21 15:06:58 +0530
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:16
+  Rendering todos/show.html.erb
+  Rendered todos/show.html.erb (1.2ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
