@@ -4,8 +4,9 @@
 <tr><th>Name</th><th>Description</th></tr>
 <% @todos.each do |todo|%>
 <tr><td><%= todo.name%></td><td><%= todo.description%></td>
-<td><p><%= link_to "Edit a Todo",edit_todo_path(todo)%></p></td>
-<td><p><%= link_to "Show a Todo",todo_path(todo)%></p></td>
+<td><%= link_to "Edit a Todo",edit_todo_path(todo)%></td>
+<td><%= link_to "Show a Todo",todo_path(todo)%></td>
+<td><%= link_to "Delete a Todo",todo_path(todo), method: :delete , data: {confirm:"Are you sure?"}%></td>
 </tr>
 
 <%end%>
